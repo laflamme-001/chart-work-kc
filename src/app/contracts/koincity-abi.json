@@ -1,0 +1,1831 @@
+{
+  "methods": {
+    "getPresales": {
+      "argument": "presalemap.list_args",
+      "return": "presalemap.list_presales",
+      "description": "Get presales with parameters",
+      "entry_point": 4239929043,
+      "read_only": true
+    },
+    "getMetrics": {
+      "argument": "",
+      "return": "presalemap.koincity_metrics",
+      "description": "",
+      "entry_point": 829483607,
+      "read_only": true
+    },
+    "getRequiredTokens": {
+      "argument": "common.uint32",
+      "return": "presale.required_tokens",
+      "description": "",
+      "entry_point": 2860870760,
+      "read_only": true
+    }
+  },
+  "types": "CoAnCg1wcmVzYWxlLnByb3RvEgdwcmVzYWxlGhRrb2lub3Mvb3B0aW9ucy5wcm90byKABAoOcHJlc2FsZV9wYXJhbXMSGgoFdG9rZW4YASABKAxCBIC1GAZSBXRva2VuEhwKB3NvZnRDYXAYAiABKARCAjABUgdzb2Z0Q2FwEhwKB2hhcmRDYXAYAyABKARCAjABUgdoYXJkQ2FwEiwKD21pbkNvbnRyaWJ1dGlvbhgEIAEoBEICMAFSD21pbkNvbnRyaWJ1dGlvbhIsCg9tYXhDb250cmlidXRpb24YBSABKARCAjABUg9tYXhDb250cmlidXRpb24SIAoJc3RhcnREYXRlGAYgASgEQgIwAVIJc3RhcnREYXRlEhwKB2VuZERhdGUYByABKARCAjABUgdlbmREYXRlEjQKE3Rva2VuUGVyS29pblByZXNhbGUYCCABKARCAjABUhN0b2tlblBlcktvaW5QcmVzYWxlEh4KB2NyZWF0b3IYCSABKAxCBIC1GAZSB2NyZWF0b3ISNAoTdG9rZW5QZXJLb2luTGlzdGluZxgKIAEoBEICMAFSE3Rva2VuUGVyS29pbkxpc3RpbmcSPAoXbGlxdWlkaXR5UG9vbFBlcmNlbnRhZ2UYCyABKARCAjABUhdsaXF1aWRpdHlQb29sUGVyY2VudGFnZRIwChFsaXF1aWRpdHlMb2NrRGF0ZRgMIAEoBEICMAFSEWxpcXVpZGl0eUxvY2tEYXRlIocBCg9yZXF1aXJlZF90b2tlbnMSKAoNdG9rZW5zUHJlc2FsZRgBIAEoBEICMAFSDXRva2Vuc1ByZXNhbGUSKAoNdG9rZW5zTGlzdGluZxgCIAEoBEICMAFSDXRva2Vuc0xpc3RpbmcSIAoJdG9rZW5zRmVlGAMgASgEQgIwAVIJdG9rZW5zRmVlIpYBCg5sYXVuY2hwYWRfZmVlcxIWCgRrb2luGAEgASgEQgIwAVIEa29pbhIYCgV0b2tlbhgCIAEoBEICMAFSBXRva2VuEigKDnNvbGRfdG9rZW5fcGN0GAMgASgEQgIwAVIMc29sZFRva2VuUGN0EigKDnNvbGRfdmFsdWVfcGN0GAQgASgEQgIwAVIMc29sZFZhbHVlUGN0IsACChBwcmVzYWxlX21ldGFkYXRhEiAKC2Rlc2NyaXB0aW9uGAEgASgJUgtkZXNjcmlwdGlvbhISCgRsb2dvGAIgASgJUgRsb2dvEhgKB3dlYnNpdGUYAyABKAlSB3dlYnNpdGUSHgoKd2hpdGVwYXBlchgEIAEoCVIKd2hpdGVwYXBlchIaCgh0ZWxlZ3JhbRgFIAEoCVIIdGVsZWdyYW0SGAoHZGlzY29yZBgGIAEoCVIHZGlzY29yZBIWCgZtZWRpdW0YByABKAlSBm1lZGl1bRIgCgtiaXRjb2ludGFsaxgIIAEoCVILYml0Y29pbnRhbGsSFgoGcmVkZGl0GAkgASgJUgZyZWRkaXQSGAoHdHdpdHRlchgKIAEoCVIHdHdpdHRlchIaCghmYWNlYm9vaxgLIAEoCVIIZmFjZWJvb2sihgMKFXByZXNhbGVfbWV0YWRhdGFfYXJncxIlCg5zdWJjb250cmFjdF9pZBgBIAEoDVINc3ViY29udHJhY3RJZBIYCgR1c2VyGAIgASgMQgSAtRgGUgR1c2VyEiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhISCgRsb2dvGAQgASgJUgRsb2dvEhgKB3dlYnNpdGUYBSABKAlSB3dlYnNpdGUSHgoKd2hpdGVwYXBlchgGIAEoCVIKd2hpdGVwYXBlchIaCgh0ZWxlZ3JhbRgHIAEoCVIIdGVsZWdyYW0SGAoHZGlzY29yZBgIIAEoCVIHZGlzY29yZBIWCgZtZWRpdW0YCSABKAlSBm1lZGl1bRIgCgtiaXRjb2ludGFsaxgKIAEoCVILYml0Y29pbnRhbGsSFgoGcmVkZGl0GAsgASgJUgZyZWRkaXQSGAoHdHdpdHRlchgMIAEoCVIHdHdpdHRlchIaCghmYWNlYm9vaxgNIAEoCVIIZmFjZWJvb2silAcKDnByZXNhbGVfY3JlYXRlEhoKBXRva2VuGAEgASgMQgSAtRgGUgV0b2tlbhIcCgdzb2Z0Q2FwGAIgASgEQgIwAVIHc29mdENhcBIcCgdoYXJkQ2FwGAMgASgEQgIwAVIHaGFyZENhcBIsCg9taW5Db250cmlidXRpb24YBCABKARCAjABUg9taW5Db250cmlidXRpb24SLAoPbWF4Q29udHJpYnV0aW9uGAUgASgEQgIwAVIPbWF4Q29udHJpYnV0aW9uEiAKCXN0YXJ0RGF0ZRgGIAEoBEICMAFSCXN0YXJ0RGF0ZRIcCgdlbmREYXRlGAcgASgEQgIwAVIHZW5kRGF0ZRI0ChN0b2tlblBlcktvaW5QcmVzYWxlGAggASgEQgIwAVITdG9rZW5QZXJLb2luUHJlc2FsZRI0ChN0b2tlblBlcktvaW5MaXN0aW5nGAkgASgEQgIwAVITdG9rZW5QZXJLb2luTGlzdGluZxI8ChdsaXF1aWRpdHlQb29sUGVyY2VudGFnZRgKIAEoBEICMAFSF2xpcXVpZGl0eVBvb2xQZXJjZW50YWdlEh4KB2NyZWF0b3IYCyABKAxCBIC1GAZSB2NyZWF0b3ISIAoLZGVzY3JpcHRpb24YDCABKAlSC2Rlc2NyaXB0aW9uEhIKBGxvZ28YDSABKAlSBGxvZ28SGAoHd2Vic2l0ZRgOIAEoCVIHd2Vic2l0ZRIeCgp3aGl0ZXBhcGVyGA8gASgJUgp3aGl0ZXBhcGVyEhoKCHRlbGVncmFtGBAgASgJUgh0ZWxlZ3JhbRIYCgdkaXNjb3JkGBEgASgJUgdkaXNjb3JkEhYKBm1lZGl1bRgSIAEoCVIGbWVkaXVtEiAKC2JpdGNvaW50YWxrGBMgASgJUgtiaXRjb2ludGFsaxIWCgZyZWRkaXQYFCABKAlSBnJlZGRpdBIYCgd0d2l0dGVyGBUgASgJUgd0d2l0dGVyEhoKCGZhY2Vib29rGBYgASgJUghmYWNlYm9vaxIwChFsaXF1aWRpdHlMb2NrRGF0ZRgXIAEoBEICMAFSEWxpcXVpZGl0eUxvY2tEYXRlEhwKCXdoaXRlbGlzdBgYIAEoCFIJd2hpdGVsaXN0Eh4KCmJ1cm5VbnNvbGQYGSABKAhSCmJ1cm5VbnNvbGQSJgoOZW5hYmxlRGVjaW1hbHMYGiABKAhSDmVuYWJsZURlY2ltYWxzIpkBChNwcmVzYWxlX2NyZWF0ZV9hcmdzEj4KDnByZXNhbGVfY3JlYXRlGAEgASgLMhcucHJlc2FsZS5wcmVzYWxlX2NyZWF0ZVINcHJlc2FsZUNyZWF0ZRIaCghuZXdUb2tlbhgCIAEoCFIIbmV3VG9rZW4SFAoFYXVkaXQYAyABKAhSBWF1ZGl0EhAKA2t5YxgEIAEoCFIDa3ljInsKCnRydXN0X2FyZ3MSJQoOc3ViY29udHJhY3RfaWQYASABKA1SDXN1YmNvbnRyYWN0SWQSFAoFYXVkaXQYAiABKAhSBWF1ZGl0EhAKA2t5YxgDIAEoCFIDa3ljEh4KB2FkZHJlc3MYBCABKAxCBIC1GAZSB2FkZHJlc3MiLwoFdHJ1c3QSFAoFYXVkaXQYASABKAhSBWF1ZGl0EhAKA2t5YxgCIAEoCFIDa3ljIlYKDHRva2VuX2NyZWF0ZRISCgRuYW1lGAEgASgJUgRuYW1lEhYKBnN5bWJvbBgCIAEoCVIGc3ltYm9sEhoKBnN1cHBseRgDIAEoBEICMAFSBnN1cHBseSLGBwoUY3JlYXRlX3Rva2VuX3ByZXNhbGUSEgoEbmFtZRgBIAEoCVIEbmFtZRIWCgZzeW1ib2wYAiABKAlSBnN5bWJvbBIaCgZzdXBwbHkYAyABKARCAjABUgZzdXBwbHkSHAoHc29mdENhcBgEIAEoBEICMAFSB3NvZnRDYXASHAoHaGFyZENhcBgFIAEoBEICMAFSB2hhcmRDYXASLAoPbWluQ29udHJpYnV0aW9uGAYgASgEQgIwAVIPbWluQ29udHJpYnV0aW9uEiwKD21heENvbnRyaWJ1dGlvbhgHIAEoBEICMAFSD21heENvbnRyaWJ1dGlvbhIgCglzdGFydERhdGUYCCABKARCAjABUglzdGFydERhdGUSHAoHZW5kRGF0ZRgJIAEoBEICMAFSB2VuZERhdGUSNAoTdG9rZW5QZXJLb2luUHJlc2FsZRgKIAEoBEICMAFSE3Rva2VuUGVyS29pblByZXNhbGUSNAoTdG9rZW5QZXJLb2luTGlzdGluZxgLIAEoBEICMAFSE3Rva2VuUGVyS29pbkxpc3RpbmcSPAoXbGlxdWlkaXR5UG9vbFBlcmNlbnRhZ2UYDCABKARCAjABUhdsaXF1aWRpdHlQb29sUGVyY2VudGFnZRIeCgdjcmVhdG9yGA0gASgMQgSAtRgGUgdjcmVhdG9yEiAKC2Rlc2NyaXB0aW9uGA4gASgJUgtkZXNjcmlwdGlvbhISCgRsb2dvGA8gASgJUgRsb2dvEhgKB3dlYnNpdGUYECABKAlSB3dlYnNpdGUSHgoKd2hpdGVwYXBlchgRIAEoCVIKd2hpdGVwYXBlchIaCgh0ZWxlZ3JhbRgSIAEoCVIIdGVsZWdyYW0SGAoHZGlzY29yZBgTIAEoCVIHZGlzY29yZBIWCgZtZWRpdW0YFCABKAlSBm1lZGl1bRIgCgtiaXRjb2ludGFsaxgVIAEoCVILYml0Y29pbnRhbGsSFgoGcmVkZGl0GBYgASgJUgZyZWRkaXQSGAoHdHdpdHRlchgXIAEoCVIHdHdpdHRlchIaCghmYWNlYm9vaxgYIAEoCVIIZmFjZWJvb2sSMAoRbGlxdWlkaXR5TG9ja0RhdGUYGSABKARCAjABUhFsaXF1aWRpdHlMb2NrRGF0ZRIcCgl3aGl0ZWxpc3QYGiABKAhSCXdoaXRlbGlzdBIeCgpidXJuVW5zb2xkGBsgASgIUgpidXJuVW5zb2xkEiYKDmVuYWJsZURlY2ltYWxzGBwgASgIUg5lbmFibGVEZWNpbWFscyJUChJwcmVzYWxlX2luaXRfZXZlbnQSPgoOcHJlc2FsZV9jcmVhdGUYASABKAsyFy5wcmVzYWxlLnByZXNhbGVfY3JlYXRlUg1wcmVzYWxlQ3JlYXRlInIKDHRva2VuX3BhcmFtcxISCgRuYW1lGAEgASgJUgRuYW1lEhYKBnN5bWJvbBgCIAEoCVIGc3ltYm9sEhoKCGRlY2ltYWxzGAMgASgNUghkZWNpbWFscxIaCgZzdXBwbHkYBCABKARCAjABUgZzdXBwbHkiVwoNc2VhcmNoX3BhcmFtcxIaCgV0b2tlbhgBIAEoDEIEgLUYBlIFdG9rZW4SEgoEbmFtZRgCIAEoCVIEbmFtZRIWCgZzeW1ib2wYAyABKAlSBnN5bWJvbCKrAQoNcHJlc2FsZV9zdGF0ZRIcCgdlbnRyaWVzGAEgASgEQgIwAVIHZW50cmllcxIgCglzb2xkVG9rZW4YAiABKARCAjABUglzb2xkVG9rZW4SIAoJc29sZFZhbHVlGAMgASgEQgIwAVIJc29sZFZhbHVlEhwKCWNhbmNlbGxlZBgEIAEoCFIJY2FuY2VsbGVkEhoKCGNhbkNsYWltGAUgASgIUghjYW5DbGFpbSI6CgxtaW5fbWF4X2FyZ3MSFAoDbWluGAEgASgEQgIwAVIDbWluEhQKA21heBgCIAEoBEICMAFSA21heCI/CgdjbGFpbWVkEhgKBHVzZXIYASABKAxCBIC1GAZSBHVzZXISGgoGYW1vdW50GAIgASgEQgIwAVIGYW1vdW50IkwKFGNvbnRyaWJ1dGVfbGF1bmNocGFkEhgKBHVzZXIYASABKAxCBIC1GAZSBHVzZXISGgoGdG9rZW5zGAIgASgEQgIwAVIGdG9rZW5zInkKEWNvbnRyaWJ1dGlvbl9hcmdzEiUKDnN1YmNvbnRyYWN0X2lkGAEgASgNUg1zdWJjb250cmFjdElkEhgKBHVzZXIYAiABKAxCBIC1GAZSBHVzZXISIwoLa29pbl9hbW91bnQYAyABKARCAjABUgprb2luQW1vdW50IlYKFXdpdGhkcmF3X2NvbnRyaWJ1dGlvbhIYCgR1c2VyGAEgASgMQgSAtRgGUgR1c2VyEiMKC2tvaW5fYW1vdW50GAIgASgEQgIwAVIKa29pbkFtb3VudCJTChJ3aXRoZHJhd19lbWVyZ2VuY3kSGAoEdXNlchgBIAEoDEIEgLUYBlIEdXNlchIjCgtrb2luX2Ftb3VudBgCIAEoBEICMAFSCmtvaW5BbW91bnQiaQoXZW1lcmdlbmN5X3dpdGhkcmF3X2FyZ3MSGAoEdXNlchgBIAEoDEIEgLUYBlIEdXNlchIcCgZsVG9rZW4YAiABKAxCBIC1GAZSBmxUb2tlbhIWCgRmZWVzGAMgASgEQgIwAVIEZmVlcyIlCg1saXN0X3ByZXNhbGVzEhQKBWl0ZW1zGAEgAygNUgVpdGVtc2IGcHJvdG8zCqoDCgxjb21tb24ucHJvdG8SBmNvbW1vbhoUa29pbm9zL29wdGlvbnMucHJvdG8iGwoDc3RyEhQKBXZhbHVlGAEgASgJUgV2YWx1ZSIeCgZ1aW50MzISFAoFdmFsdWUYASABKA1SBXZhbHVlIiIKBnVpbnQ2NBIYCgV2YWx1ZRgBIAEoBEICMAFSBXZhbHVlIh0KBWJvb2xlEhQKBXZhbHVlGAEgASgIUgV2YWx1ZSIpCgdhZGRyZXNzEh4KB2FjY291bnQYASABKAxCBIC1GAZSB2FjY291bnQibgoJbGlzdF9hcmdzEhoKBXN0YXJ0GAEgASgMQgSAtRgGUgVzdGFydBIUCgVsaW1pdBgCIAEoBVIFbGltaXQSLwoJZGlyZWN0aW9uGAMgASgOMhEuY29tbW9uLmRpcmVjdGlvblIJZGlyZWN0aW9uIi0KCWFkZHJlc3NlcxIgCghhY2NvdW50cxgBIAMoDEIEgLUYBlIIYWNjb3VudHMqKgoJZGlyZWN0aW9uEg0KCWFzY2VuZGluZxAAEg4KCmRlc2NlbmRpbmcQAWIGcHJvdG8zCsMBChBvd25hYmxlbWFwLnByb3RvEgpvd25hYmxlbWFwGgxjb21tb24ucHJvdG8ijAEKBGFyZ3MSJQoOc3ViY29udHJhY3RfaWQYASABKA1SDXN1YmNvbnRyYWN0SWQSKwoHYWRkcmVzcxgCIAEoCzIPLmNvbW1vbi5hZGRyZXNzSABSB2FkZHJlc3MSKAoGdWludDY0GAMgASgLMg4uY29tbW9uLnVpbnQ2NEgAUgZ1aW50NjRCBgoEa2luZGIGcHJvdG8zCvkYChBwcmVzYWxlbWFwLnByb3RvEgpwcmVzYWxlbWFwGg1wcmVzYWxlLnByb3RvGgxjb21tb24ucHJvdG8aFGtvaW5vcy9vcHRpb25zLnByb3RvIlcKBnVpbnQ2NBIlCg5zdWJjb250cmFjdF9pZBgBIAEoDVINc3ViY29udHJhY3RJZBImCgZ1aW50NjQYAiABKAsyDi5jb21tb24udWludDY0UgZ1aW50NjQiUAoHYWRkcmVzcxIlCg5zdWJjb250cmFjdF9pZBgBIAEoDVINc3ViY29udHJhY3RJZBIeCgdhZGRyZXNzGAIgASgMQgSAtRgGUgdhZGRyZXNzIjQKC3N1YmNvbnRyYWN0EiUKDnN1YmNvbnRyYWN0X2lkGAEgASgNUg1zdWJjb250cmFjdElkInIKCGZpbmFsaXplEiUKDnN1YmNvbnRyYWN0X2lkGAEgASgNUg1zdWJjb250cmFjdElkEh4KB2FkZHJlc3MYAiABKAxCBIC1GAZSB2FkZHJlc3MSHwoLY3JlYXRlX3BhaXIYAyABKAhSCmNyZWF0ZVBhaXIilgEKDXNlYXJjaF9wYXJhbXMSGgoFdG9rZW4YASABKAxCBIC1GAZSBXRva2VuEhIKBG5hbWUYAiABKAlSBG5hbWUSFgoGc3ltYm9sGAMgASgJUgZzeW1ib2wSFgoGc3RhdHVzGAQgASgFUgZzdGF0dXMSJQoOc3ViY29udHJhY3RfaWQYBSABKA1SDXN1YmNvbnRyYWN0SWQiggEKEGtvaW5jaXR5X21ldHJpY3MSIgoKa29pblJhaXNlZBgBIAEoBEICMAFSCmtvaW5SYWlzZWQSIgoKa29pbkxvY2tlZBgCIAEoBEICMAFSCmtvaW5Mb2NrZWQSJgoMcGFydGljaXBhbnRzGAMgASgEQgIwAVIMcGFydGljaXBhbnRzItoCCg1rb2luY2l0eV9mZWVzEiAKCWxhdW5jaHBhZBgBIAEoBEICMAFSCWxhdW5jaHBhZBIYCgVhdWRpdBgCIAEoBEICMAFSBWF1ZGl0EhQKA2t5YxgDIAEoBEICMAFSA2t5YxIjCgt0b2tlbl90eXBlMBgEIAEoBEICMAFSCnRva2VuVHlwZTASIwoLdG9rZW5fdHlwZTEYBSABKARCAjABUgp0b2tlblR5cGUxEiMKC3Rva2VuX3R5cGUyGAYgASgEQgIwAVIKdG9rZW5UeXBlMhIoCg5zb2xkX3Rva2VuX3BjdBgHIAEoBEICMAFSDHNvbGRUb2tlblBjdBIoCg5zb2xkX3ZhbHVlX3BjdBgIIAEoBEICMAFSDHNvbGRWYWx1ZVBjdBI0ChRzb2xkX2luZGVwZW5kZW50X3BjdBgJIAEoBEICMAFSEnNvbGRJbmRlcGVuZGVudFBjdCJyCg9wcmVzYWxlX3VwZGF0ZXMSJQoOc3ViY29udHJhY3RfaWQYASABKA1SDXN1YmNvbnRyYWN0SWQSFgoGc3RhdHVzGAIgASgFUgZzdGF0dXMSIAoJc29sZFZhbHVlGAMgASgEQgIwAVIJc29sZFZhbHVlIlMKBWJvb2xlEiUKDnN1YmNvbnRyYWN0X2lkGAEgASgNUg1zdWJjb250cmFjdElkEiMKBWJvb2xlGAIgASgLMg0uY29tbW9uLmJvb2xlUgVib29sZSJsCglsaXN0X2FyZ3MSFAoFc3RhcnQYASABKA1SBXN0YXJ0EhQKBWxpbWl0GAIgASgFUgVsaW1pdBIzCglkaXJlY3Rpb24YAyABKA4yFS5wcmVzYWxlbWFwLmRpcmVjdGlvblIJZGlyZWN0aW9uIpQBChFsaXN0X2FkZHJlc3NfYXJncxIeCgdhZGRyZXNzGAEgASgMQgSAtRgGUgdhZGRyZXNzEhQKBXN0YXJ0GAIgASgNUgVzdGFydBIUCgVsaW1pdBgDIAEoBVIFbGltaXQSMwoJZGlyZWN0aW9uGAQgASgOMhUucHJlc2FsZW1hcC5kaXJlY3Rpb25SCWRpcmVjdGlvbiKSAQoLc2VhcmNoX2FyZ3MSIgoMc2VhcmNoc3RyaW5nGAEgASgJUgxzZWFyY2hzdHJpbmcSFAoFc3RhcnQYAiABKA1SBXN0YXJ0EhQKBWxpbWl0GAMgASgFUgVsaW1pdBIzCglkaXJlY3Rpb24YBCABKA4yFS5wcmVzYWxlbWFwLmRpcmVjdGlvblIJZGlyZWN0aW9uIkEKDWxpc3RfcHJlc2FsZXMSMAoFdmFsdWUYASADKAsyGi5wcmVzYWxlbWFwLnByZXNhbGVfcGFyYW1zUgV2YWx1ZSJBCgxsaXN0X3VwZGF0ZXMSMQoFdmFsdWUYASADKAsyGy5wcmVzYWxlbWFwLnByZXNhbGVfdXBkYXRlc1IFdmFsdWUiQgoPc2VhcmNoX3ByZXNhbGVzEi8KBXZhbHVlGAEgAygLMhkucHJlc2FsZW1hcC5zZWFyY2hfcGFyYW1zUgV2YWx1ZSJGCglsb2dvX2RhdGESJQoOc3ViY29udHJhY3RfaWQYASABKA1SDXN1YmNvbnRyYWN0SWQSEgoEbG9nbxgCIAEoCVIEbG9nbyI5CgpsaXN0X2xvZ29zEisKBXZhbHVlGAEgAygLMhUucHJlc2FsZW1hcC5sb2dvX2RhdGFSBXZhbHVlIs8ECg5wcmVzYWxlX3BhcmFtcxIlCg5zdWJjb250cmFjdF9pZBgBIAEoDVINc3ViY29udHJhY3RJZBI+Cg5wcmVzYWxlX3BhcmFtcxgCIAEoCzIXLnByZXNhbGUucHJlc2FsZV9wYXJhbXNSDXByZXNhbGVQYXJhbXMSLAoFc3RhdGUYAyABKAsyFi5wcmVzYWxlLnByZXNhbGVfc3RhdGVSBXN0YXRlEhYKBnN0YXR1cxgEIAEoBVIGc3RhdHVzEhwKCWJsb2NrdGltZRgFIAEoBFIJYmxvY2t0aW1lEjgKDHRva2VuX3BhcmFtcxgGIAEoCzIVLnByZXNhbGUudG9rZW5fcGFyYW1zUgt0b2tlblBhcmFtcxI6ChhlbWVyZ2VuY3lXaXRoZHJhd0VuYWJsZWQYByABKAhSGGVtZXJnZW5jeVdpdGhkcmF3RW5hYmxlZBIoCg93aXRoZHJhd0VuYWJsZWQYCCABKAhSD3dpdGhkcmF3RW5hYmxlZBIeCgpsYXVuY2hEYXRlGAkgASgEUgpsYXVuY2hEYXRlEiQKBXRydXN0GAogASgLMg4ucHJlc2FsZS50cnVzdFIFdHJ1c3QSHAoJd2hpdGVsaXN0GAsgASgIUgl3aGl0ZWxpc3QSHgoKYnVyblVuc29sZBgMIAEoCFIKYnVyblVuc29sZBImCg5lbmFibGVEZWNpbWFscxgNIAEoCFIOZW5hYmxlRGVjaW1hbHMSJgoOcmV0dXJuZWRUb2tlbnMYDiABKAhSDnJldHVybmVkVG9rZW5zIm4KDG1pbl9tYXhfYXJncxIlCg5zdWJjb250cmFjdF9pZBgBIAEoDVINc3ViY29udHJhY3RJZBI3CgxtaW5fbWF4X2FyZ3MYAiABKAsyFS5wcmVzYWxlLm1pbl9tYXhfYXJnc1IKbWluTWF4QXJncyKEAQoRY29udHJpYnV0aW9uX2FyZ3MSJQoOc3ViY29udHJhY3RfaWQYASABKA1SDXN1YmNvbnRyYWN0SWQSJwoEdXNlchgCIAEoCzITLnByZXNhbGVtYXAuYWRkcmVzc1IEdXNlchIfCgtrb2luX2Ftb3VudBgDIAEoBFIKa29pbkFtb3VudCKaAQoXZW1lcmdlbmN5X3dpdGhkcmF3X2FyZ3MSJQoOc3ViY29udHJhY3RfaWQYASABKA1SDXN1YmNvbnRyYWN0SWQSWAoXZW1lcmdlbmN5X3dpdGhkcmF3X2FyZ3MYAiABKAsyIC5wcmVzYWxlLmVtZXJnZW5jeV93aXRoZHJhd19hcmdzUhVlbWVyZ2VuY3lXaXRoZHJhd0FyZ3MiiwEKGXVzZXJfcHJlc2FsZV9jb250cmlidXRpb24SKAoPdXNlclByZXNhbGVLb2luGAEgASgEUg91c2VyUHJlc2FsZUtvaW4SKgoQdXNlclByZXNhbGVUb2tlbhgCIAEoBFIQdXNlclByZXNhbGVUb2tlbhIYCgdjbGFpbWVkGAMgASgIUgdjbGFpbWVkKioKCWRpcmVjdGlvbhINCglhc2NlbmRpbmcQABIOCgpkZXNjZW5kaW5nEAFiBnByb3RvMwqsBgoOZXhjaGFuZ2UucHJvdG8SCGV4Y2hhbmdlGhRrb2lub3Mvb3B0aW9ucy5wcm90byIbCgNzdHISFAoFdmFsdWUYASABKAlSBXZhbHVlIh4KBnVpbnQzMhIUCgV2YWx1ZRgBIAEoDVIFdmFsdWUiIgoGdWludDY0EhgKBXZhbHVlGAEgASgEQgIwAVIFdmFsdWUiJQoHYWRkcmVzcxIaCgV2YWx1ZRgBIAEoDEIEgLUYBlIFdmFsdWUiHQoFYm9vbGUSFAoFdmFsdWUYASABKAhSBXZhbHVlIkYKEmdldF9wYWlyX2FyZ3VtZW50cxIXCgd0b2tlbl9hGAEgASgJUgZ0b2tlbkESFwoHdG9rZW5fYhgCIAEoCVIGdG9rZW5CIkkKFWNyZWF0ZV9wYWlyX2FyZ3VtZW50cxIXCgd0b2tlbl9hGAEgASgJUgZ0b2tlbkESFwoHdG9rZW5fYhgCIAEoCVIGdG9rZW5CIq8CChdhZGRfbGlxdWlkaXR5X2FyZ3VtZW50cxIYCgRmcm9tGAEgASgMQgSAtRgGUgRmcm9tEiAKCHJlY2VpdmVyGAIgASgMQgSAtRgGUghyZWNlaXZlchIXCgd0b2tlbl9hGAMgASgJUgZ0b2tlbkESFwoHdG9rZW5fYhgEIAEoCVIGdG9rZW5CEiwKEGFtb3VudF9hX2Rlc2lyZWQYBSABKARCAjABUg5hbW91bnRBRGVzaXJlZBIsChBhbW91bnRfYl9kZXNpcmVkGAYgASgEQgIwAVIOYW1vdW50QkRlc2lyZWQSJAoMYW1vdW50X2FfbWluGAcgASgEQgIwAVIKYW1vdW50QU1pbhIkCgxhbW91bnRfYl9taW4YCCABKARCAjABUgphbW91bnRCTWluInYKFGFkZF9saXF1aWRpdHlfcmVzdWx0EiAKCWxpcXVpZGl0eRgBIAEoBEICMAFSCWxpcXVpZGl0eRIdCghhbW91bnRfYRgCIAEoBEICMAFSB2Ftb3VudEESHQoIYW1vdW50X2IYAyABKARCAjABUgdhbW91bnRCIg4KDGVtcHR5X29iamVjdGIGcHJvdG8zCq8KCg90b2tlbmxvY2sucHJvdG8SCXRva2VubG9jaxoUa29pbm9zL29wdGlvbnMucHJvdG8iGwoDc3RyEhQKBXZhbHVlGAEgASgJUgV2YWx1ZSIeCgZ1aW50MzISFAoFdmFsdWUYASABKA1SBXZhbHVlIiIKBnVpbnQ2NBIYCgV2YWx1ZRgBIAEoBEICMAFSBXZhbHVlIiUKB2FkZHJlc3MSGgoFdmFsdWUYASABKAxCBIC1GAZSBXZhbHVlIh0KBWJvb2xlEhQKBXZhbHVlGAEgASgIUgV2YWx1ZSIOCgxlbXB0eV9vYmplY3QiwwEKC2xvY2tzX2VudHJ5EhoKBXRva2VuGAEgASgMQgSAtRgGUgV0b2tlbhIaCgVvd25lchgCIAEoDEIEgLUYBlIFb3duZXISIAoIcmVjZWl2ZXIYAyABKAxCBIC1GAZSCHJlY2VpdmVyEhwKB2VuZERhdGUYBCABKARCAjABUgdlbmREYXRlEhoKBmFtb3VudBgFIAEoBEICMAFSBmFtb3VudBIgCgtkZXNjcmlwdGlvbhgGIAEoCVILZGVzY3JpcHRpb24i/gEKCmxvY2tzX2l0ZW0SGgoFdG9rZW4YASABKAxCBIC1GAZSBXRva2VuEhoKBW93bmVyGAIgASgMQgSAtRgGUgVvd25lchIgCghyZWNlaXZlchgDIAEoDEIEgLUYBlIIcmVjZWl2ZXISIAoJc3RhcnREYXRlGAQgASgEQgIwAVIJc3RhcnREYXRlEhwKB2VuZERhdGUYBSABKARCAjABUgdlbmREYXRlEhoKBmFtb3VudBgGIAEoBEICMAFSBmFtb3VudBIgCgtkZXNjcmlwdGlvbhgHIAEoCVILZGVzY3JpcHRpb24SGAoHY2xhaW1lZBgIIAEoCFIHY2xhaW1lZCJPChR0b2tlbmxvY2tfaW5pdF9ldmVudBI3Cgtsb2Nrc19lbnRyeRgBIAEoCzIWLnRva2VubG9jay5sb2Nrc19lbnRyeVIKbG9ja3NFbnRyeSJHCg9sb2Nrc19pdGVtX2xpc3QSNAoKbG9ja3NfaXRlbRgBIAMoCzIVLnRva2VubG9jay5sb2Nrc19pdGVtUglsb2Nrc0l0ZW0ifQoLbG9ja19wYXJhbXMSNAoKbG9ja3NfaXRlbRgBIAEoCzIVLnRva2VubG9jay5sb2Nrc19pdGVtUglsb2Nrc0l0ZW0SFgoGbG9ja2VkGAIgASgIUgZsb2NrZWQSIAoJYmxvY2t0aW1lGAMgASgEQgIwAVIJYmxvY2t0aW1lIlQKCnRva2VuX2luZm8SEgoEbmFtZRgBIAEoCVIEbmFtZRIWCgZzeW1ib2wYAiABKAlSBnN5bWJvbBIaCghkZWNpbWFscxgDIAEoDVIIZGVjaW1hbHMinAEKEmxvY2tfcGFyYW1zX3Jlc3VsdBIXCgdsb2NrX2lkGAEgASgNUgZsb2NrSWQSNwoLbG9ja19wYXJhbXMYAiABKAsyFi50b2tlbmxvY2subG9ja19wYXJhbXNSCmxvY2tQYXJhbXMSNAoKdG9rZW5faW5mbxgDIAEoCzIVLnRva2VubG9jay50b2tlbl9pbmZvUgl0b2tlbkluZm8iQQoKbGlzdF9sb2NrcxIzCgV2YWx1ZRgBIAMoCzIdLnRva2VubG9jay5sb2NrX3BhcmFtc19yZXN1bHRSBXZhbHVlIiQKDGxpc3RfbXlMb2NrcxIUCgVpdGVtcxgBIAMoDVIFaXRlbXNiBnByb3RvMw==",
+  "koilib_types": {
+    "nested": {
+      "presale": {
+        "nested": {
+          "presale_params": {
+            "fields": {
+              "token": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "softCap": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "hardCap": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "minContribution": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "maxContribution": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "startDate": {
+                "type": "uint64",
+                "id": 6,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "endDate": {
+                "type": "uint64",
+                "id": 7,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokenPerKoinPresale": {
+                "type": "uint64",
+                "id": 8,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "creator": {
+                "type": "bytes",
+                "id": 9,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "tokenPerKoinListing": {
+                "type": "uint64",
+                "id": 10,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "liquidityPoolPercentage": {
+                "type": "uint64",
+                "id": 11,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "liquidityLockDate": {
+                "type": "uint64",
+                "id": 12,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "required_tokens": {
+            "fields": {
+              "tokensPresale": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokensListing": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokensFee": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "launchpad_fees": {
+            "fields": {
+              "koin": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "token": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "sold_token_pct": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "sold_value_pct": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "presale_metadata": {
+            "fields": {
+              "description": {
+                "type": "string",
+                "id": 1
+              },
+              "logo": {
+                "type": "string",
+                "id": 2
+              },
+              "website": {
+                "type": "string",
+                "id": 3
+              },
+              "whitepaper": {
+                "type": "string",
+                "id": 4
+              },
+              "telegram": {
+                "type": "string",
+                "id": 5
+              },
+              "discord": {
+                "type": "string",
+                "id": 6
+              },
+              "medium": {
+                "type": "string",
+                "id": 7
+              },
+              "bitcointalk": {
+                "type": "string",
+                "id": 8
+              },
+              "reddit": {
+                "type": "string",
+                "id": 9
+              },
+              "twitter": {
+                "type": "string",
+                "id": 10
+              },
+              "facebook": {
+                "type": "string",
+                "id": 11
+              }
+            }
+          },
+          "presale_metadata_args": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "user": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "description": {
+                "type": "string",
+                "id": 3
+              },
+              "logo": {
+                "type": "string",
+                "id": 4
+              },
+              "website": {
+                "type": "string",
+                "id": 5
+              },
+              "whitepaper": {
+                "type": "string",
+                "id": 6
+              },
+              "telegram": {
+                "type": "string",
+                "id": 7
+              },
+              "discord": {
+                "type": "string",
+                "id": 8
+              },
+              "medium": {
+                "type": "string",
+                "id": 9
+              },
+              "bitcointalk": {
+                "type": "string",
+                "id": 10
+              },
+              "reddit": {
+                "type": "string",
+                "id": 11
+              },
+              "twitter": {
+                "type": "string",
+                "id": 12
+              },
+              "facebook": {
+                "type": "string",
+                "id": 13
+              }
+            }
+          },
+          "presale_create": {
+            "fields": {
+              "token": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "softCap": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "hardCap": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "minContribution": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "maxContribution": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "startDate": {
+                "type": "uint64",
+                "id": 6,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "endDate": {
+                "type": "uint64",
+                "id": 7,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokenPerKoinPresale": {
+                "type": "uint64",
+                "id": 8,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokenPerKoinListing": {
+                "type": "uint64",
+                "id": 9,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "liquidityPoolPercentage": {
+                "type": "uint64",
+                "id": 10,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "creator": {
+                "type": "bytes",
+                "id": 11,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "description": {
+                "type": "string",
+                "id": 12
+              },
+              "logo": {
+                "type": "string",
+                "id": 13
+              },
+              "website": {
+                "type": "string",
+                "id": 14
+              },
+              "whitepaper": {
+                "type": "string",
+                "id": 15
+              },
+              "telegram": {
+                "type": "string",
+                "id": 16
+              },
+              "discord": {
+                "type": "string",
+                "id": 17
+              },
+              "medium": {
+                "type": "string",
+                "id": 18
+              },
+              "bitcointalk": {
+                "type": "string",
+                "id": 19
+              },
+              "reddit": {
+                "type": "string",
+                "id": 20
+              },
+              "twitter": {
+                "type": "string",
+                "id": 21
+              },
+              "facebook": {
+                "type": "string",
+                "id": 22
+              },
+              "liquidityLockDate": {
+                "type": "uint64",
+                "id": 23,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "whitelist": {
+                "type": "bool",
+                "id": 24
+              },
+              "burnUnsold": {
+                "type": "bool",
+                "id": 25
+              },
+              "enableDecimals": {
+                "type": "bool",
+                "id": 26
+              }
+            }
+          },
+          "presale_create_args": {
+            "fields": {
+              "presale_create": {
+                "type": "presale_create",
+                "id": 1
+              },
+              "newToken": {
+                "type": "bool",
+                "id": 2
+              },
+              "audit": {
+                "type": "bool",
+                "id": 3
+              },
+              "kyc": {
+                "type": "bool",
+                "id": 4
+              }
+            }
+          },
+          "trust_args": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "audit": {
+                "type": "bool",
+                "id": 2
+              },
+              "kyc": {
+                "type": "bool",
+                "id": 3
+              },
+              "address": {
+                "type": "bytes",
+                "id": 4,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "trust": {
+            "fields": {
+              "audit": {
+                "type": "bool",
+                "id": 1
+              },
+              "kyc": {
+                "type": "bool",
+                "id": 2
+              }
+            }
+          },
+          "token_create": {
+            "fields": {
+              "name": {
+                "type": "string",
+                "id": 1
+              },
+              "symbol": {
+                "type": "string",
+                "id": 2
+              },
+              "supply": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "create_token_presale": {
+            "fields": {
+              "name": {
+                "type": "string",
+                "id": 1
+              },
+              "symbol": {
+                "type": "string",
+                "id": 2
+              },
+              "supply": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "softCap": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "hardCap": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "minContribution": {
+                "type": "uint64",
+                "id": 6,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "maxContribution": {
+                "type": "uint64",
+                "id": 7,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "startDate": {
+                "type": "uint64",
+                "id": 8,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "endDate": {
+                "type": "uint64",
+                "id": 9,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokenPerKoinPresale": {
+                "type": "uint64",
+                "id": 10,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "tokenPerKoinListing": {
+                "type": "uint64",
+                "id": 11,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "liquidityPoolPercentage": {
+                "type": "uint64",
+                "id": 12,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "creator": {
+                "type": "bytes",
+                "id": 13,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "description": {
+                "type": "string",
+                "id": 14
+              },
+              "logo": {
+                "type": "string",
+                "id": 15
+              },
+              "website": {
+                "type": "string",
+                "id": 16
+              },
+              "whitepaper": {
+                "type": "string",
+                "id": 17
+              },
+              "telegram": {
+                "type": "string",
+                "id": 18
+              },
+              "discord": {
+                "type": "string",
+                "id": 19
+              },
+              "medium": {
+                "type": "string",
+                "id": 20
+              },
+              "bitcointalk": {
+                "type": "string",
+                "id": 21
+              },
+              "reddit": {
+                "type": "string",
+                "id": 22
+              },
+              "twitter": {
+                "type": "string",
+                "id": 23
+              },
+              "facebook": {
+                "type": "string",
+                "id": 24
+              },
+              "liquidityLockDate": {
+                "type": "uint64",
+                "id": 25,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "whitelist": {
+                "type": "bool",
+                "id": 26
+              },
+              "burnUnsold": {
+                "type": "bool",
+                "id": 27
+              },
+              "enableDecimals": {
+                "type": "bool",
+                "id": 28
+              }
+            }
+          },
+          "presale_init_event": {
+            "fields": {
+              "presale_create": {
+                "type": "presale_create",
+                "id": 1
+              }
+            }
+          },
+          "token_params": {
+            "fields": {
+              "name": {
+                "type": "string",
+                "id": 1
+              },
+              "symbol": {
+                "type": "string",
+                "id": 2
+              },
+              "decimals": {
+                "type": "uint32",
+                "id": 3
+              },
+              "supply": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "search_params": {
+            "fields": {
+              "token": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "name": {
+                "type": "string",
+                "id": 2
+              },
+              "symbol": {
+                "type": "string",
+                "id": 3
+              }
+            }
+          },
+          "presale_state": {
+            "fields": {
+              "entries": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "soldToken": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "soldValue": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "cancelled": {
+                "type": "bool",
+                "id": 4
+              },
+              "canClaim": {
+                "type": "bool",
+                "id": 5
+              }
+            }
+          },
+          "min_max_args": {
+            "fields": {
+              "min": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "max": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "claimed": {
+            "fields": {
+              "user": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "amount": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "contribute_launchpad": {
+            "fields": {
+              "user": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "tokens": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "contribution_args": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "user": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "koin_amount": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "withdraw_contribution": {
+            "fields": {
+              "user": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "koin_amount": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "withdraw_emergency": {
+            "fields": {
+              "user": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "koin_amount": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "emergency_withdraw_args": {
+            "fields": {
+              "user": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "lToken": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "fees": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "list_presales": {
+            "fields": {
+              "items": {
+                "rule": "repeated",
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          }
+        }
+      },
+      "common": {
+        "nested": {
+          "str": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "uint32": {
+            "fields": {
+              "value": {
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          },
+          "uint64": {
+            "fields": {
+              "value": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "boole": {
+            "fields": {
+              "value": {
+                "type": "bool",
+                "id": 1
+              }
+            }
+          },
+          "address": {
+            "fields": {
+              "account": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "direction": {
+            "values": {
+              "ascending": 0,
+              "descending": 1
+            }
+          },
+          "list_args": {
+            "fields": {
+              "start": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "limit": {
+                "type": "int32",
+                "id": 2
+              },
+              "direction": {
+                "type": "direction",
+                "id": 3
+              }
+            }
+          },
+          "addresses": {
+            "fields": {
+              "accounts": {
+                "rule": "repeated",
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ownablemap": {
+        "nested": {
+          "args": {
+            "oneofs": {
+              "kind": {
+                "oneof": ["address", "uint64"]
+              }
+            },
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "address": {
+                "type": "common.address",
+                "id": 2
+              },
+              "uint64": {
+                "type": "common.uint64",
+                "id": 3
+              }
+            }
+          }
+        }
+      },
+      "presalemap": {
+        "nested": {
+          "uint64": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "uint64": {
+                "type": "common.uint64",
+                "id": 2
+              }
+            }
+          },
+          "address": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "address": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "subcontract": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          },
+          "finalize": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "address": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "create_pair": {
+                "type": "bool",
+                "id": 3
+              }
+            }
+          },
+          "search_params": {
+            "fields": {
+              "token": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "name": {
+                "type": "string",
+                "id": 2
+              },
+              "symbol": {
+                "type": "string",
+                "id": 3
+              },
+              "status": {
+                "type": "int32",
+                "id": 4
+              },
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 5
+              }
+            }
+          },
+          "koincity_metrics": {
+            "fields": {
+              "koinRaised": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "koinLocked": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "participants": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "koincity_fees": {
+            "fields": {
+              "launchpad": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "audit": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "kyc": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "token_type0": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "token_type1": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "token_type2": {
+                "type": "uint64",
+                "id": 6,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "sold_token_pct": {
+                "type": "uint64",
+                "id": 7,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "sold_value_pct": {
+                "type": "uint64",
+                "id": 8,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "sold_independent_pct": {
+                "type": "uint64",
+                "id": 9,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "presale_updates": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "status": {
+                "type": "int32",
+                "id": 2
+              },
+              "soldValue": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "boole": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "boole": {
+                "type": "common.boole",
+                "id": 2
+              }
+            }
+          },
+          "direction": {
+            "values": {
+              "ascending": 0,
+              "descending": 1
+            }
+          },
+          "list_args": {
+            "fields": {
+              "start": {
+                "type": "uint32",
+                "id": 1
+              },
+              "limit": {
+                "type": "int32",
+                "id": 2
+              },
+              "direction": {
+                "type": "direction",
+                "id": 3
+              }
+            }
+          },
+          "list_address_args": {
+            "fields": {
+              "address": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "start": {
+                "type": "uint32",
+                "id": 2
+              },
+              "limit": {
+                "type": "int32",
+                "id": 3
+              },
+              "direction": {
+                "type": "direction",
+                "id": 4
+              }
+            }
+          },
+          "search_args": {
+            "fields": {
+              "searchstring": {
+                "type": "string",
+                "id": 1
+              },
+              "start": {
+                "type": "uint32",
+                "id": 2
+              },
+              "limit": {
+                "type": "int32",
+                "id": 3
+              },
+              "direction": {
+                "type": "direction",
+                "id": 4
+              }
+            }
+          },
+          "list_presales": {
+            "fields": {
+              "value": {
+                "rule": "repeated",
+                "type": "presalemap.presale_params",
+                "id": 1
+              }
+            }
+          },
+          "list_updates": {
+            "fields": {
+              "value": {
+                "rule": "repeated",
+                "type": "presalemap.presale_updates",
+                "id": 1
+              }
+            }
+          },
+          "search_presales": {
+            "fields": {
+              "value": {
+                "rule": "repeated",
+                "type": "presalemap.search_params",
+                "id": 1
+              }
+            }
+          },
+          "logo_data": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "logo": {
+                "type": "string",
+                "id": 2
+              }
+            }
+          },
+          "list_logos": {
+            "fields": {
+              "value": {
+                "rule": "repeated",
+                "type": "logo_data",
+                "id": 1
+              }
+            }
+          },
+          "presale_params": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "presale_params": {
+                "type": "presale.presale_params",
+                "id": 2
+              },
+              "state": {
+                "type": "presale.presale_state",
+                "id": 3
+              },
+              "status": {
+                "type": "int32",
+                "id": 4
+              },
+              "blocktime": {
+                "type": "uint64",
+                "id": 5
+              },
+              "token_params": {
+                "type": "presale.token_params",
+                "id": 6
+              },
+              "emergencyWithdrawEnabled": {
+                "type": "bool",
+                "id": 7
+              },
+              "withdrawEnabled": {
+                "type": "bool",
+                "id": 8
+              },
+              "launchDate": {
+                "type": "uint64",
+                "id": 9
+              },
+              "trust": {
+                "type": "presale.trust",
+                "id": 10
+              },
+              "whitelist": {
+                "type": "bool",
+                "id": 11
+              },
+              "burnUnsold": {
+                "type": "bool",
+                "id": 12
+              },
+              "enableDecimals": {
+                "type": "bool",
+                "id": 13
+              },
+              "returnedTokens": {
+                "type": "bool",
+                "id": 14
+              }
+            }
+          },
+          "min_max_args": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "min_max_args": {
+                "type": "presale.min_max_args",
+                "id": 2
+              }
+            }
+          },
+          "contribution_args": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "user": {
+                "type": "address",
+                "id": 2
+              },
+              "koin_amount": {
+                "type": "uint64",
+                "id": 3
+              }
+            }
+          },
+          "emergency_withdraw_args": {
+            "fields": {
+              "subcontract_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "emergency_withdraw_args": {
+                "type": "presale.emergency_withdraw_args",
+                "id": 2
+              }
+            }
+          },
+          "user_presale_contribution": {
+            "fields": {
+              "userPresaleKoin": {
+                "type": "uint64",
+                "id": 1
+              },
+              "userPresaleToken": {
+                "type": "uint64",
+                "id": 2
+              },
+              "claimed": {
+                "type": "bool",
+                "id": 3
+              }
+            }
+          }
+        }
+      },
+      "exchange": {
+        "nested": {
+          "str": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "uint32": {
+            "fields": {
+              "value": {
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          },
+          "uint64": {
+            "fields": {
+              "value": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "address": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "boole": {
+            "fields": {
+              "value": {
+                "type": "bool",
+                "id": 1
+              }
+            }
+          },
+          "get_pair_arguments": {
+            "fields": {
+              "token_a": {
+                "type": "string",
+                "id": 1
+              },
+              "token_b": {
+                "type": "string",
+                "id": 2
+              }
+            }
+          },
+          "create_pair_arguments": {
+            "fields": {
+              "token_a": {
+                "type": "string",
+                "id": 1
+              },
+              "token_b": {
+                "type": "string",
+                "id": 2
+              }
+            }
+          },
+          "add_liquidity_arguments": {
+            "fields": {
+              "from": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "receiver": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "token_a": {
+                "type": "string",
+                "id": 3
+              },
+              "token_b": {
+                "type": "string",
+                "id": 4
+              },
+              "amount_a_desired": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount_b_desired": {
+                "type": "uint64",
+                "id": 6,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount_a_min": {
+                "type": "uint64",
+                "id": 7,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount_b_min": {
+                "type": "uint64",
+                "id": 8,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "add_liquidity_result": {
+            "fields": {
+              "liquidity": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount_a": {
+                "type": "uint64",
+                "id": 2,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount_b": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "empty_object": {
+            "fields": {}
+          }
+        }
+      },
+      "tokenlock": {
+        "nested": {
+          "str": {
+            "fields": {
+              "value": {
+                "type": "string",
+                "id": 1
+              }
+            }
+          },
+          "uint32": {
+            "fields": {
+              "value": {
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          },
+          "uint64": {
+            "fields": {
+              "value": {
+                "type": "uint64",
+                "id": 1,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "address": {
+            "fields": {
+              "value": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              }
+            }
+          },
+          "boole": {
+            "fields": {
+              "value": {
+                "type": "bool",
+                "id": 1
+              }
+            }
+          },
+          "empty_object": {
+            "fields": {}
+          },
+          "locks_entry": {
+            "fields": {
+              "token": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "owner": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "receiver": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "endDate": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "description": {
+                "type": "string",
+                "id": 6
+              }
+            }
+          },
+          "locks_item": {
+            "fields": {
+              "token": {
+                "type": "bytes",
+                "id": 1,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "owner": {
+                "type": "bytes",
+                "id": 2,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "receiver": {
+                "type": "bytes",
+                "id": 3,
+                "options": {
+                  "(koinos.btype)": "ADDRESS"
+                }
+              },
+              "startDate": {
+                "type": "uint64",
+                "id": 4,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "endDate": {
+                "type": "uint64",
+                "id": 5,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "amount": {
+                "type": "uint64",
+                "id": 6,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              },
+              "description": {
+                "type": "string",
+                "id": 7
+              },
+              "claimed": {
+                "type": "bool",
+                "id": 8
+              }
+            }
+          },
+          "tokenlock_init_event": {
+            "fields": {
+              "locks_entry": {
+                "type": "locks_entry",
+                "id": 1
+              }
+            }
+          },
+          "locks_item_list": {
+            "fields": {
+              "locks_item": {
+                "rule": "repeated",
+                "type": "tokenlock.locks_item",
+                "id": 1
+              }
+            }
+          },
+          "lock_params": {
+            "fields": {
+              "locks_item": {
+                "type": "tokenlock.locks_item",
+                "id": 1
+              },
+              "locked": {
+                "type": "bool",
+                "id": 2
+              },
+              "blocktime": {
+                "type": "uint64",
+                "id": 3,
+                "options": {
+                  "jstype": "JS_STRING"
+                }
+              }
+            }
+          },
+          "token_info": {
+            "fields": {
+              "name": {
+                "type": "string",
+                "id": 1
+              },
+              "symbol": {
+                "type": "string",
+                "id": 2
+              },
+              "decimals": {
+                "type": "uint32",
+                "id": 3
+              }
+            }
+          },
+          "lock_params_result": {
+            "fields": {
+              "lock_id": {
+                "type": "uint32",
+                "id": 1
+              },
+              "lock_params": {
+                "type": "tokenlock.lock_params",
+                "id": 2
+              },
+              "token_info": {
+                "type": "tokenlock.token_info",
+                "id": 3
+              }
+            }
+          },
+          "list_locks": {
+            "fields": {
+              "value": {
+                "rule": "repeated",
+                "type": "tokenlock.lock_params_result",
+                "id": 1
+              }
+            }
+          },
+          "list_myLocks": {
+            "fields": {
+              "items": {
+                "rule": "repeated",
+                "type": "uint32",
+                "id": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "events": {
+    "ownership_transferred": {
+      "argument": "common.address"
+    }
+  }
+}
