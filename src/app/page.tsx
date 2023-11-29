@@ -1,25 +1,39 @@
 "use client";
-import { getTokenMetrics, getRequiredTokens } from "./utils";
+import { getRequiredTokens, getPresales } from "./utils";
 import { useEffect, useState } from "react";
 export default function Home() {
-  useEffect(() => {
-    const getAllTokenInfo = async () => {
-      const tokenMetrics = await getTokenMetrics(5, 1, 1);
-      const requiredTokenMetrics = await getRequiredTokens(5);
-    };
-
-    getAllTokenInfo();
-  }, []);
+  const [launchpadNum, setLaunchPadNum] = useState<number>(5);
+  const [requiredTokens, setRequiredTokens] =
+    useState<getRequiredTokensQuery | null>(null);
   const width = 400;
   const half = width / 2;
 
-  type tokenAllocationType = {
+  // Types will be placed in a diff folder.
+  type tokenAllocation = {
     symbol: string;
     amount: number;
     color: string;
     totalSold: number;
   };
-  const tokenAllocation: tokenAllocationType[] = [
+
+  type getRequiredTokensQuery = {
+    tokensPresale: string;
+    tokensListing: string;
+    tokensFee: string;
+  };
+
+  useEffect(() => {
+    const getAllTokenInfo = async () => {
+      const getPresalesQuery = await getPresales(launchpadNum, 1, 1);
+      const getRequiredTokensQuery = await getRequiredTokens(5);
+      // type error needs fixing
+      // setRequiredTokens(getRequiredTokensQuery);
+    };
+
+    getAllTokenInfo();
+  }, [launchpadNum]);
+
+  const tokenAllocation: tokenAllocation[] = [
     {
       symbol: "Presale",
       amount: 172.5,

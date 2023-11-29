@@ -18,7 +18,7 @@ const KoinCityContract = new Contract({
   signer,
 });
 
-export const getTokenMetrics = async (
+export const getPresales = async (
   start: number,
   limit: number,
   direction: number
