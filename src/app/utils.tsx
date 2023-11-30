@@ -20,8 +20,8 @@ const KoinCityContract = new Contract({
 
 export const getPresales = async (
   start: number,
-  limit: number,
-  direction: number
+  limit: number = 1,
+  direction: number = 1
 ) => {
   try {
     const { result } = await KoinCityContract.functions.getPresales({

@@ -2,9 +2,10 @@
 import { getRequiredTokens, getPresales } from "./utils";
 import { useEffect, useState } from "react";
 export default function Home() {
-  const [launchpadNum, setLaunchPadNum] = useState<number>(5);
+  const [launchpadNum, setLaunchPadNum] = useState<number>(4);
   const [requiredTokens, setRequiredTokens] =
     useState<getRequiredTokensQuery | null>(null);
+  const [tokenState, setTokenState] = useState<SoldToken | null>();
   const width = 400;
   const half = width / 2;
 
@@ -22,12 +23,30 @@ export default function Home() {
     tokensFee: string;
   };
 
+  type SoldToken = {
+    soldToken: string;
+  };
+
+  type TokenParams = {
+    name: string;
+    symbol: string;
+    decimals: number;
+    supply: string;
+  };
+
   useEffect(() => {
     const getAllTokenInfo = async () => {
-      const getPresalesQuery = await getPresales(launchpadNum, 1, 1);
-      const getRequiredTokensQuery = await getRequiredTokens(5);
-      // type error needs fixing
-      // setRequiredTokens(getRequiredTokensQuery);
+      try {
+        const response = await getPresales(launchpadNum);
+        const soldToken: SoldToken = response?.value[0].state.soldToken;
+        setTokenState(soldToken);
+        const getRequiredTokensQuery = (await getRequiredTokens(
+          launchpadNum
+        )) as getRequiredTokensQuery;
+        setRequiredTokens(getRequiredTokensQuery);
+      } catch (error) {
+        console.log(error);
+      }
     };
 
     getAllTokenInfo();
