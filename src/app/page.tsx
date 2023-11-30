@@ -6,6 +6,7 @@ export default function Home() {
   const [requiredTokens, setRequiredTokens] =
     useState<getRequiredTokensQuery | null>(null);
   const [tokenState, setTokenState] = useState<SoldToken | null>();
+  const [tokenInfo, setTokenInfo] = useState<TokenInfo | null>();
   const width = 400;
   const half = width / 2;
 
@@ -27,7 +28,7 @@ export default function Home() {
     soldToken: string;
   };
 
-  type TokenParams = {
+  type TokenInfo = {
     name: string;
     symbol: string;
     decimals: number;
@@ -38,12 +39,15 @@ export default function Home() {
     const getAllTokenInfo = async () => {
       try {
         const response = await getPresales(launchpadNum);
+
         const soldToken: SoldToken = response?.value[0].state.soldToken;
-        setTokenState(soldToken);
+        const tokenInfo: TokenInfo = response?.value[0].token_params;
         const getRequiredTokensQuery = (await getRequiredTokens(
           launchpadNum
         )) as getRequiredTokensQuery;
         setRequiredTokens(getRequiredTokensQuery);
+        setTokenState(soldToken);
+        setTokenInfo(tokenInfo);
       } catch (error) {
         console.log(error);
       }
@@ -51,6 +55,10 @@ export default function Home() {
 
     getAllTokenInfo();
   }, [launchpadNum]);
+
+  // console.log(requiredTokens);
+  // console.log(tokenState);
+  // console.log(tokenInfo);
 
   const tokenAllocation: tokenAllocation[] = [
     {
