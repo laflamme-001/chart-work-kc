@@ -24,13 +24,12 @@ export default function Home() {
     const getAllTokenInfo = async () => {
       try {
         const response = await getPresales(launchpadNum);
-
-        const soldToken: SoldToken = response?.value[0].state.soldToken;
+        const soldToken: SoldToken = Number(response?.value[0].state.soldToken);
         const tokenInfo: TokenInfo = response?.value[0].token_params;
-        const getRequiredTokensQuery = (await getRequiredTokens(
+        const requiredTokens = (await getRequiredTokens(
           launchpadNum
         )) as getRequiredTokensQuery;
-        setRequiredTokens(getRequiredTokensQuery);
+        setRequiredTokens(requiredTokens);
         setTokenState(soldToken);
         setTokenInfo(tokenInfo);
       } catch (error) {
@@ -41,34 +40,30 @@ export default function Home() {
     getAllTokenInfo();
   }, [launchpadNum]);
 
-  // console.log(requiredTokens);
-  // console.log(tokenState);
-  // console.log(tokenInfo);
-
   const tokenAllocations: tokenAllocation[] = [
     {
       symbol: "Presale",
-      amount: 172.5,
+      amount: Number(requiredTokens?.tokensPresale),
       color: "#e38627",
-      totalSold: 420,
+      totalSold: Number(tokenInfo?.supply),
     },
     {
       symbol: "Listing",
-      amount: 138,
+      amount: Number(requiredTokens?.tokensListing),
       color: "#c13c38",
-      totalSold: 420,
+      totalSold: Number(tokenInfo?.supply),
     },
     {
       symbol: "Fees",
-      amount: 3.45,
+      amount: Number(requiredTokens?.tokensFee),
       color: "#6a2135",
-      totalSold: 420,
+      totalSold: Number(tokenInfo?.supply),
     },
     {
       symbol: "Unlocked",
       amount: 106.05,
       color: "#1f7a8c",
-      totalSold: 420,
+      totalSold: Number(tokenInfo?.supply),
     },
   ];
 
@@ -119,9 +114,9 @@ export default function Home() {
                   : 0
               }%`}
             </Text>
-            <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={60} dx={-5}>
+            {/* <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={60} dx={-5}>
               {active ? active.amount : ""}
-            </Text>
+            </Text> */}
           </>
         ) : (
           <Text textAnchor="middle" fill="#fff" fontSize={40} dy={-20}>

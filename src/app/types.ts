@@ -11,9 +11,7 @@ export type getRequiredTokensQuery = {
   tokensFee: string;
 };
 
-export type SoldToken = {
-  soldToken: string;
-};
+export type SoldToken = number;
 
 export type TokenInfo = {
   name: string;
