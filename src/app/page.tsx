@@ -1,8 +1,12 @@
 "use client";
+import { Group } from "@visx/group";
+import { Pie } from "@visx/shape";
+import { Text } from "@visx/text";
 import { getRequiredTokens, getPresales } from "./utils";
 import { useEffect, useState } from "react";
 export default function Home() {
-  const [launchpadNum, setLaunchPadNum] = useState<number>(4);
+  const [active, setActive] = useState<tokenAllocation | undefined>(undefined);
+  const [launchpadNum, setLaunchPadNum] = useState<number>(5);
   const [requiredTokens, setRequiredTokens] =
     useState<getRequiredTokensQuery | null>(null);
   const [tokenState, setTokenState] = useState<SoldToken | null>();
@@ -60,7 +64,7 @@ export default function Home() {
   // console.log(tokenState);
   // console.log(tokenInfo);
 
-  const tokenAllocation: tokenAllocation[] = [
+  const tokenAllocations: tokenAllocation[] = [
     {
       symbol: "Presale",
       amount: 172.5,
@@ -70,22 +74,56 @@ export default function Home() {
     {
       symbol: "Listing",
       amount: 138,
-      color: "#e38627",
+      color: "#c13c38",
       totalSold: 420,
     },
     {
       symbol: "Fees",
       amount: 3.45,
-      color: "#e38627",
+      color: "#6a2135",
       totalSold: 420,
     },
     {
       symbol: "Unlocked",
       amount: 106.05,
-      color: "#e38627",
+      color: "#1f7a8c",
       totalSold: 420,
     },
   ];
 
-  return <svg className="mt-12" width={width} height={width}></svg>;
+  return (
+    <svg className="mt-12" width={width} height={width}>
+      <Group top={half} left={half}>
+        <Pie
+          data={tokenAllocations}
+          pieValue={(data) => {
+            return data.amount / data.totalSold;
+          }}
+          outerRadius={half}
+          innerRadius={({ data }) => {
+            const activeSymbol = active?.symbol;
+            const dataSymbol = data?.symbol;
+
+            const size = activeSymbol && activeSymbol === dataSymbol ? 18 : 8;
+            return half - size;
+          }}
+          padAngle={0.01}
+        >
+          {(pie) => {
+            return pie.arcs.map((arc) => {
+              return (
+                <g
+                  key={arc.data.symbol}
+                  onMouseEnter={() => setActive(arc.data)}
+                  onMouseLeave={() => setActive(undefined)}
+                >
+                  <path d={pie.path(arc) ?? ""} fill={arc.data.color}></path>
+                </g>
+              );
+            });
+          }}
+        </Pie>
+      </Group>
+    </svg>
+  );
 }
