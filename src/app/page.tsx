@@ -1,4 +1,10 @@
 "use client";
+import {
+  tokenAllocation,
+  getRequiredTokensQuery,
+  SoldToken,
+  TokenInfo,
+} from "./types";
 import { Group } from "@visx/group";
 import { Pie } from "@visx/shape";
 import { Text } from "@visx/text";
@@ -13,31 +19,6 @@ export default function Home() {
   const [tokenInfo, setTokenInfo] = useState<TokenInfo | null>();
   const width = 400;
   const half = width / 2;
-
-  // Types will be placed in a diff folder.
-  type tokenAllocation = {
-    symbol: string;
-    amount: number;
-    color: string;
-    totalSold: number;
-  };
-
-  type getRequiredTokensQuery = {
-    tokensPresale: string;
-    tokensListing: string;
-    tokensFee: string;
-  };
-
-  type SoldToken = {
-    soldToken: string;
-  };
-
-  type TokenInfo = {
-    name: string;
-    symbol: string;
-    decimals: number;
-    supply: string;
-  };
 
   useEffect(() => {
     const getAllTokenInfo = async () => {
@@ -123,6 +104,30 @@ export default function Home() {
             });
           }}
         </Pie>
+        {active ? (
+          <>
+            <Text textAnchor="middle" fill="#fff" fontSize={40} dy={-20}>
+              {active ? active.symbol : ""}
+            </Text>
+            <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={20}>
+              {`${
+                active
+                  ? (
+                      Number((active.amount / active.totalSold).toFixed(4)) *
+                      100
+                    ).toFixed(2)
+                  : 0
+              }%`}
+            </Text>
+            <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={60} dx={-5}>
+              {active ? active.amount : ""}
+            </Text>
+          </>
+        ) : (
+          <Text textAnchor="middle" fill="#fff" fontSize={40} dy={-20}>
+            {tokenInfo ? tokenInfo.symbol : ""}
+          </Text>
+        )}
       </Group>
     </svg>
   );
