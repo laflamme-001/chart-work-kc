@@ -40,6 +40,13 @@ export default function Home() {
     getAllTokenInfo();
   }, [launchpadNum]);
 
+  // Unlocked amount should take into account other token deductions before calculating final amount.
+  const unlockedAmount =
+    Number(tokenInfo?.supply) -
+    Number(requiredTokens?.tokensListing) -
+    Number(requiredTokens?.tokensPresale) -
+    Number(requiredTokens?.tokensFee);
+
   const tokenAllocations: tokenAllocation[] = [
     {
       symbol: "Presale",
@@ -61,7 +68,7 @@ export default function Home() {
     },
     {
       symbol: "Unlocked",
-      amount: 106.05,
+      amount: unlockedAmount,
       color: "#1f7a8c",
       totalSold: Number(tokenInfo?.supply),
     },
@@ -114,9 +121,6 @@ export default function Home() {
                   : 0
               }%`}
             </Text>
-            {/* <Text textAnchor="middle" fill="#aaa" fontSize={20} dy={60} dx={-5}>
-              {active ? active.amount : ""}
-            </Text> */}
           </>
         ) : (
           <Text textAnchor="middle" fill="#fff" fontSize={40} dy={-20}>
